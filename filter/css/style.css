@@ -1,0 +1,145 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    background: #eee;
+    font-family: sans-serif;
+    padding: 8rem;
+    overflow: hidden;
+}
+
+body::before, body::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: away;
+    animation-duration: 2s;
+    transform-origin: right;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(0.1, 0.7, 0.9, 0.2);
+}
+
+body::before{
+    background: rgb(9, 143, 9);
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+body::after{
+    z-index: 2;
+    background-color: green;
+}
+
+main{
+    width: 100%;
+    opacity: 0;
+    animation-name: itemsZoom;
+    animation-duration: 0.8s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+.filter{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background: gray;
+    border-radius: 1rem;
+    
+}
+.filter:checked{
+    background: green;
+}
+
+.filter:checked ~ .label{
+    text-decoration: underline;
+}
+
+.filter:hover{
+    cursor: pointer;
+}
+
+.label:hover{
+    cursor: pointer;
+}
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+}
+
+.inputs > div{
+    display: flex;
+    align-items: center;
+    width: 40rem;
+}
+
+.gamelist{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+}
+
+.game{
+    list-style: none;
+    width: 25rem;
+    height: 30rem;
+    padding: 2rem;
+    flex-grow: 1;
+    transition: 0.2s transform;
+
+}
+
+.game img{
+    width: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.game:hover{
+    transform: scale(1.02) translateY(-0.7rem);
+    cursor: pointer;
+
+}
+
+
+@keyframes away {
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+    
+}
+
+@keyframes itemsZoom {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}

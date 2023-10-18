@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <script src="https://kit.fontawesome.com/6b17c91111.js" crossorigin="anonymous"></script>
+    <title>shoppingcart</title>
+</head>
+
+<body>
+    
+    <section id="js--checkoutWindow" class="shopItems a-popup">
+        <ul class="checkout__list">
+            <li class="checkout__listItem">
+                <img src="img/749253C01_RGB.webp" alt="yoda" class="checkout__image">
+                <p class="checkout__title">Yoda</p>
+                <p id="js--yoda" class="checkout__amount"></p>
+            </li>
+            <li class="checkout__listItem">
+                <img src="img/790783C01_RGB.webp" alt="wakanda" class="checkout__image">
+                <p class="checkout__title">Wakanda</p>
+                <p id="js--wakanda" class="checkout__amount"></p>
+            </li>
+            <li class="checkout__listItem">
+                <img src="img/792323C01_RGB.webp" alt="spiderman" class="checkout__image">
+                <p class="checkout__title">SpiderMan</p>
+                <p id="js--spiderman" class="checkout__amount"></p>
+            </li>
+        </ul>
+    </section>
+    <article class="modal a-popup" id="js--shopModal">
+        &#10003;Aan winkelwagen toegevoegd.
+    </article>
+    <button id="js--checkoutButton" class="shoppingCart">
+        <i class="fa-sharp fa-solid fa-shop"></i>
+        <div class="shoppingCart__Message">0</div>
+    </button>
+    <section class="fill"></section>
+    <section class="searchBar">
+        <input id="js--searchBar" type="text" placeholder="Search for product here" class="searchBar__input">
+        <i class="fa-solid fa-magnifying-glass searchBar__glass"></i>
+    </section>
+    <main>
+        
+        <ul class="games">
+            <li data-type="YODA - STAR WARS" class="games__game">
+                <figure class="games__figure">
+                    <img src="img/749253C01_RGB.webp" alt="Yoda Sieraad" class="games__img">
+                </figure>
+                <section class="games__body">
+                    <s>€70</s>
+                    <h2 class="games__h2">€50</h2>
+                    <h3 class="games__h3">Yoda - Star Wars</h3>
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="yoda" class="games__button">Add to Cart</button>
+                </section>
+
+            </li>
+            <li data-type="WAKANDA - MARVEL" class="games__game">
+                <figure class="games__figure">
+                    <img src="img/790783C01_RGB.webp" alt="Wakanda Sieraad" class="games__img">
+                </figure>
+                <section class="games__body">
+                    <s>€62</s>
+                    <h2 class="games__h2">€55</h2>
+                    <h3 class="games__h3">Wakanda - Marvel</h3>
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="wakanda" class="games__button">Add to Cart</button>
+                </section>
+
+            </li>
+            <li data-type="SPIDERMAN - MARVEL" class="games__game games__game--third">
+                <figure class="games__figure">
+                    <img src="img/792323C01_RGB.webp" alt="Spiderman Sieraad" class="games__img">
+                </figure>
+                <section class="games__body">
+                    <s>€50</s>
+                    <h2 class="games__h2">€38</h2>
+                    <h3 class="games__h3">SpiderMan - Marvel</h3>
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="spiderman" class="games__button">Add to Cart</button>
+                </section>
+            </li>
+        </ul>
+        
+
+
+    </main>
+    <section class="fill"></section>
+
+</body>
+
+</html>
